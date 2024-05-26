@@ -72,8 +72,7 @@ const googleSing = async( req, res = response ) => {
                 correo,
                 password:':p',
                 img,
-                google:true,
-                rol:'USER_ROLE'
+                google:true
             };
 
             usuario = new Usuario( data );

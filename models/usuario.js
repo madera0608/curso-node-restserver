@@ -28,6 +28,7 @@ const UsuarioSchema = Schema({
     },
     rol: {
         type: String,
+        default: 'USER_ROLE',
         required: [true, 'El rol es obigatorio'],
         enum:['ADMIN_ROLE','USER_ROLE']
     },
