@@ -16,6 +16,7 @@ const router = Router();
 router.get('/', usuariosGet);
 
 router.put('/:id', [
+    valdiarJWT,
     check('id', 'No es un Id valido').isMongoId(),
     check('id').custom(existeUsuarioPorId),
     check('rol').custom( esRoleValido ),
@@ -25,6 +26,7 @@ router.put('/:id', [
 
 router.post('/',
 [
+    valdiarJWT,
     check('nombre', 'El nombre no debe estar vacio').not().isEmpty(),
     check('password', 'El password debe ser mayor de 6 letras').isLength({min:6}),
     check('correo', 'El correo no es valido').isEmail(),
