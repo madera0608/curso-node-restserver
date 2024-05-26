@@ -2,7 +2,10 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 
-const { validarCampos, valdiarJWT, esAdminRol, tieneRole } = require('../middlewares');
+const { validarCampos,
+        valdiarJWT, 
+        esAdminRol, 
+        tieneRole } = require('../middlewares');
 
 const { esRoleValido, emailExiste,existeUsuarioPorId } = require('../helpers/db-validators');
 const { usuariosGet, usuariosPut, usuariosPatch, usuariosDelete, usuariosPost } = require('../controllers/usuarios');
